@@ -1,8 +1,5 @@
 # tintin-alterepoch
 
-Created by [Abyzou](https://ae-mud.com/wiki/index.php?title=Abyzou_Akui) the Jackal.
-
-## Overview
 A very basic configuration to provide a clean layout useable in [Alter Epoch](https://ae-mud.com/) in the [TinTin++](https://tintin.sourceforge.io) MUD client.
 
 ![Screenshot](https://i.imgur.com/ntevAjR.png)
