@@ -115,7 +115,7 @@
 	{
 	    #regex {%0} {%* tells you %*} {showtowin <ccd>@NOW{} <ffa>%1 tells you '%2;#line gag}
 	}
-        #default
+        #default;
         {
             #line ignore #showme
         }
