@@ -5,11 +5,12 @@ Created by [Abyzou](https://ae-mud.com/wiki/index.php?title=Abyzou_Akui) the Jac
 ## Overview
 A very basic configuration to provide a clean layout useable in [Alter Epoch](https://ae-mud.com/) in the [TinTin++](https://tintin.sourceforge.io) MUD client.
 
-![Screenshot](https://imgur.com/a/yUpa69m)
+![Screenshot](https://i.imgur.com/ntevAjR.png)
 
 ## Installation
 Download the TinTin++ Mud client, find the `/bin/ folder` in it and replace the `main.tin` inside.  
-For my settings to work correctly I use a rather small and clean window, so I can do whatever next to it, even on one monitor. You might have to fiddle a bit more if you want to use it fullscreen. `TinTin Options - Text - Consolas, 10` and `TinTin Options - Window Columns 120, Rows, 62`
+For my settings to work correctly I use a rather small and clean window, so I can do whatever next to it, even on one monitor. You might have to fiddle a bit more if you want to use it fullscreen.  
+`TinTin Options - Text - Consolas, 10` and `TinTin Options - Window Columns 120, Rows, 62`
 
 ## Features
 * OOC chat window with time-stamps
