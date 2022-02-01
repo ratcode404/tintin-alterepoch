@@ -12,7 +12,7 @@ For my settings to work correctly I use a rather small and clean window, so I ca
 ## Features
 * OOC chat window with time-stamps
 * Status chat window (with suppressed status bar after every output received)
-* Movement Scaling highlighted
+* MV highlighted and slightly more accessible level info
 * Custom accessible color highlighting, for names or misc.
 * Macros possibilities
 * Automated logging of current and last session
