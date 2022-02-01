@@ -1,1 +1,140 @@
+#NOP USE FOLLOWING SETTINGS IN WINDOW - COLUMNS 120 ROWS 62 - FONT SIZE 10
 
+#HIGHLIGHT {Abyzou} {Jade}
+
+#SESSION {AE} {ae-mud.com} {9002}
+
+#NOP ----------------------------------------------------------------------------------------
+#NOP INITIATE
+#NOP ----------------------------------------------------------------------------------------
+
+#SPLIT 15 1 0 0 2
+#FUNC NOW {#format result {%t} {%H:%M}}
+#SCREEN SCROLLBAR ON 
+#CONFIG {COMMAND ECHO} OFF
+
+#NOP ----------------------------------------------------------------------------------------
+#NOP MACROS
+#NOP ----------------------------------------------------------------------------------------
+
+#ALIAS ARMOR1 {
+	wear helmet
+}
+
+#ALIAS ARMOR2 {
+	remove helmet
+}
+
+#NOP ----------------------------------------------------------------------------------------
+#NOP CHATBOX
+#NOP ----------------------------------------------------------------------------------------
+
+#VARIABLE {window}
+{
+     {1} {}
+     {2} {}
+     {3} {}
+     {4} {}
+     {5} {}
+     {6} {}
+     {7} {}
+     {8} {}
+     {9} {}
+     {10} {}
+     {11} {}
+}
+#ALIAS {showtowin}
+{
+     #list window del 1;
+     #list window ins -1 {%0};
+     #DRAW WHITE BOX 1 1 13 120 $window[-11..-1]
+}
+
+
+#NOP ----------------------------------------------------------------------------------------
+#NOP RPXP BOX AND SUPRESS RPXP IN MAIN
+#NOP ----------------------------------------------------------------------------------------
+
+#ALIAS {empty_line_handler}
+{
+    #switch {{%0}}
+    {
+        #case {{[RPXP Gain: %* MV:fresh %*}}
+        {
+            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <afa>MV:fresh(10/10);#line gag
+        };
+		#case {{[RPXP Gain: %* MV:rested %*}}
+        {
+            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <cfa>MV:rested(9/10);#line gag
+        };
+		#case {{[RPXP Gain: %* MV:worked %*}}
+		{
+            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <dfa>MV:worked(8/10);#line gag
+        };
+		#case {{[RPXP Gain: %* MV:tired %*}}
+		{
+            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <efa>MV:tired(7/10);#line gag
+        };
+		#case {{[RPXP Gain: %* MV:weary %*}}
+		{
+            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <ffa>MV:weary(6/10);#line gag
+        };
+		#case {{[RPXP Gain: %* MV:fatigued %*}}
+		{
+            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <fea>MV:fatigued(5/10);#line gag
+        };
+		#case {{[RPXP Gain: %* MV:drained %*}}
+		{
+            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <fda>MV:drained(4/10);#line gag
+        };
+		#case {{[RPXP Gain: %* MV:sapped %*}}
+		{
+            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <fba>MV:sapped(3/10);#line gag
+        };
+		#case {{[RPXP Gain: %* MV:enervated %*}}
+		{
+            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <ffa>MV:enervated(2/10);#line gag
+        };
+		#case {{[RPXP Gain: %* MV:exhausted %*}}
+		{
+            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eea>MV:exhausted(1/10);#line gag
+        };
+		#case {{[RPXP Gain: %* MV:unconscious %*}}
+		{
+            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eea>MV:unconscious(0/10);#line gag
+        };
+        #case {{[OOC] %* %*}}
+        {
+            #regex {%0} {[OOC] %* %*} {showtowin <ccd>@NOW{} <bfe>[OOC] <bbe>&1<fff> &2;#line gag}
+        };
+	#case {{(visnet) %* %*}}
+        {
+            #regex {%0} {(visnet) %* %*} {showtowin <ccd>@NOW{} <bfb>(visnet) <bbc>&1<fff> &2;#line gag}
+        };
+	#case {{(%* tells you %*}}
+	{
+	    #regex {%0} {%* tells you %*} {showtowin <ccd>@NOW{} <ffa>%1 tells you '%2;#line gag}
+	}
+        #default
+        {
+            #line ignore #showme
+        }
+    }
+}
+
+#ACTION {^$}
+{
+    #line gag;
+    #line oneshot #ACTION {%*} {empty_line_handler %%0}
+}
+{4}
+
+
+#NOP ----------------------------------------------------------------------------------------
+#NOP LOGGING
+#NOP ----------------------------------------------------------------------------------------
+
+#CONFIG LOG PLAIN
+#LOG OVERWRITE log.txt
+
+#SHOWME Abyzou tells you 'READY TO GO!!'
