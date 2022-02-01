@@ -18,6 +18,7 @@ For my settings to work correctly I use a rather small and clean window, so I ca
 * Automated logging of current and last session
 * Working scrollbar
 * Suppressed command echos
+* Possible to use TinTin++ mapping features, although no plans to make a HUD for this
 
 #### Color Highlighting
 To customize your highlights, find the example `#HIGHLIGHT` in `/bin/main.tin` on line 3. More information on available colors can be found [here](https://tintin.mudhalla.net/manual/highlight.php).
