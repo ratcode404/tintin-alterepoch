@@ -63,43 +63,43 @@
         {
             #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <afa>MV:fresh(10/10);#line gag
         };
-		#case {{[RPXP Gain: %* MV:rested %*}}
+	#case {{[RPXP Gain: %* MV:rested %*}}
         {
             #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <cfa>MV:rested(9/10);#line gag
         };
-		#case {{[RPXP Gain: %* MV:worked %*}}
+	#case {{[RPXP Gain: %* MV:worked %*}}
 		{
             #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <dfa>MV:worked(8/10);#line gag
         };
-		#case {{[RPXP Gain: %* MV:tired %*}}
+	#case {{[RPXP Gain: %* MV:tired %*}}
 		{
             #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <efa>MV:tired(7/10);#line gag
         };
-		#case {{[RPXP Gain: %* MV:weary %*}}
+	#case {{[RPXP Gain: %* MV:weary %*}}
 		{
             #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <ffa>MV:weary(6/10);#line gag
         };
-		#case {{[RPXP Gain: %* MV:fatigued %*}}
+	#case {{[RPXP Gain: %* MV:fatigued %*}}
 		{
             #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <fea>MV:fatigued(5/10);#line gag
         };
-		#case {{[RPXP Gain: %* MV:drained %*}}
+	#case {{[RPXP Gain: %* MV:drained %*}}
 		{
             #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <fda>MV:drained(4/10);#line gag
         };
-		#case {{[RPXP Gain: %* MV:sapped %*}}
+	#case {{[RPXP Gain: %* MV:sapped %*}}
 		{
             #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <fba>MV:sapped(3/10);#line gag
         };
-		#case {{[RPXP Gain: %* MV:enervated %*}}
+	#case {{[RPXP Gain: %* MV:enervated %*}}
 		{
             #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <ffa>MV:enervated(2/10);#line gag
         };
-		#case {{[RPXP Gain: %* MV:exhausted %*}}
+	#case {{[RPXP Gain: %* MV:exhausted %*}}
 		{
             #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eea>MV:exhausted(1/10);#line gag
         };
-		#case {{[RPXP Gain: %* MV:unconscious %*}}
+	#case {{[RPXP Gain: %* MV:unconscious %*}}
 		{
             #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eea>MV:unconscious(0/10);#line gag
         };
