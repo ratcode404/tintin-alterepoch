@@ -14,7 +14,7 @@ For my settings to work correctly I use a rather small and clean window, so I ca
 * Status chat window (with suppressed status bar after every output received)
 * Movement Scaling highlighted
 * Custom accessible color highlighting, for names or misc.
-* Macros possbilities
+* Macros possibilities
 * Automated logging of current and last session
 * Working scrollbar
 * Suppressed command echos
