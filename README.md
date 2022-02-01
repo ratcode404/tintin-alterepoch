@@ -11,8 +11,9 @@ Download the TinTin++ Mud client, find the `/bin/ folder` in it and replace the 
 ## Features
 * OOC chat window with time-stamps
 * Status chat window (with suppressed status bar after every output received)
-* Color Highlighting
-* Macros
+* Movement Scaling highlighted
+* Custom accessible color highlighting, for names or misc.
+* Macros possbilities
 * Automated logging of current and last session
 * Working scrollbar
 * Suppressed command echos
