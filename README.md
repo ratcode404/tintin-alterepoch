@@ -9,10 +9,13 @@ A very basic configuration to provide a clean layout useable in [Alter Epoch](ht
 Download the TinTin++ Mud client, find the `/bin/ folder` in it and replace the `main.tin` inside.
 
 ## Features
-* OOC chat window
+* OOC chat window with time-stamps
 * Status chat window (with suppressed status bar after every output received)
 * Color Highlighting
 * Macros
+* Automated logging of current and last session
+* Working scrollbar
+* Suppressed command echos
 
 #### Color Highlighting
 To customize your highlights, find the example `#HIGHLIGHT` in `/bin/main.tin` on line 3. More information on available colors can be found [here](https://tintin.mudhalla.net/manual/highlight.php).
