@@ -1,6 +1,6 @@
 # tintin-alterepoch
 
-A very basic configuration to provide a clean layout useable in [Alter Epoch](https://ae-mud.com/) in the [TinTin++](https://tintin.sourceforge.io) MUD client.
+A very basic configuration to provide a clean layout useable in [Alter Epoch](https://ae-mud.com/) for the [TinTin++](https://tintin.sourceforge.io) MUD client.
 
 ![Screenshot](https://i.imgur.com/ntevAjR.png)
 
