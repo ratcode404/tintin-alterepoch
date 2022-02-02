@@ -1,7 +1,5 @@
 #NOP USE FOLLOWING SETTINGS IN WINDOW - COLUMNS 120 ROWS 62 - FONT SIZE 10
 
-#HIGHLIGHT {Abyzou} {Jade}
-
 #SESSION {AE} {ae-mud.com} {9002}
 
 #NOP ----------------------------------------------------------------------------------------
@@ -14,16 +12,11 @@
 #CONFIG {COMMAND ECHO} OFF
 
 #NOP ----------------------------------------------------------------------------------------
-#NOP MACROS
+#NOP LOAD FILES
 #NOP ----------------------------------------------------------------------------------------
 
-#ALIAS ARMOR1 {
-	wear helmet
-}
-
-#ALIAS ARMOR2 {
-	remove helmet
-}
+#READ highlight.tin
+#READ macros.tin
 
 #NOP ----------------------------------------------------------------------------------------
 #NOP CHATBOX
