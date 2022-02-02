@@ -70,11 +70,11 @@
 	{
 		#case {{[RPXP Gain: %* MV:%S %* (hooded) %*}}
 		{
-		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>HOODED! <ccd>MV: $mv_table[current];#line gag
+		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <bbc>[ <fab>HOODED <bbc>] MV: $mv_table[current];#line gag
 		};
 		#case {{[RPXP Gain: %* MV:%S %*}}
 		{
-		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <ccd>MV: $mv_table[current];#line gag
+		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <bbc>[ <g02>hooded <bbc>] MV: $mv_table[current];#line gag
 		};
 		#case {{[OOC] %* %*}}
 		{
