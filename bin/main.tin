@@ -55,110 +55,46 @@
 #NOP RPXP BOX AND SUPRESS RPXP IN MAIN
 #NOP ----------------------------------------------------------------------------------------
 
+#VAR {mv_table}
+{
+    {fresh} 		{<afa>Fresh(10/10)}
+    {rested} 		{<cfa>Rested(9/10)}
+	{worked} 		{<dfa>Worked(8/10)}
+	{tired} 		{<efa>Tired(7/10)}
+    {weary(} 		{<ffa>Weary(6/10)}
+	{fatigued} 		{<fea>Fatigued(5/10)}
+	{drained} 		{<fda>Drained(4/10)}
+	{sapped} 		{<fba>Sapped(3/10)}
+	{enervated} 	{<faa>Enervated(2/10)}
+	{exhausted} 	{<eaa>Exhausted(1/10)}
+	{unconscious}	{<eaa>Unconscious(0/10)}
+}
+
 #ALIAS {empty_line_handler}
 {
+	#regex {%0} {[RPXP Gain: %* MV:%S %*} {#var mv_table[current] $mv_table[&2]};
     #switch {{%0}}
-    {
-	#case {{[RPXP Gain: %* MV:fresh %* (hooded) %*}}
+	{
+        #case {{[RPXP Gain: %* MV:%S %* (hooded) %*}}
         {
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>HOODED! <afa>MV:fresh(10/10);#line gag
+            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>HOODED! <ccd>MV: $mv_table[current];#line gag
         };
-	#case {{[RPXP Gain: %* MV:rested %* (hooded) %*}}
+        #case {{[RPXP Gain: %* MV:%S %*}}
         {
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>HOODED! <cfa>MV:rested(9/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:worked %* (hooded) %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>HOODED! <dfa>MV:worked(8/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:tired %* (hooded) %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>HOODED! <efa>MV:tired(7/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:weary %* (hooded) %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>HOODED! <ffa>MV:weary(6/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:fatigued %* (hooded) %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>HOODED! <fea>MV:fatigued(5/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:drained %* (hooded) %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>HOODED! <fda>MV:drained(4/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:sapped %* (hooded) %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>HOODED! <fba>MV:sapped(3/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:enervated %* (hooded) %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>HOODED! <faa>MV:enervated(2/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:exhausted %* (hooded) %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>HOODED! <eaa>MV:exhausted(1/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:unconscious %* (hooded) %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>HOODED! <eaa>MV:unconscious(0/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:fresh %*}}
-        {
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <afa>MV:fresh(10/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:rested %*}}
-        {
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <cfa>MV:rested(9/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:worked %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <dfa>MV:worked(8/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:tired %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <efa>MV:tired(7/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:weary %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <ffa>MV:weary(6/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:fatigued %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <fea>MV:fatigued(5/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:drained %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <fda>MV:drained(4/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:sapped %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <fba>MV:sapped(3/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:enervated %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <faa>MV:enervated(2/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:exhausted %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>MV:exhausted(1/10);#line gag
-        };
-	#case {{[RPXP Gain: %* MV:unconscious %*}}
-	{
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>MV:unconscious(0/10);#line gag
+            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <ccd>MV: $mv_table[current];#line gag
         };
         #case {{[OOC] %* %*}}
         {
             #regex {%0} {[OOC] %* %*} {showtowin <ccd>@NOW{} <bfe>[OOC] <bbe>&1<fff> &2;#line gag}
         };
-	#case {{(visnet) %* %*}}
+		#case {{(visnet) %* %*}}
         {
             #regex {%0} {(visnet) %* %*} {showtowin <ccd>@NOW{} <bfb>(visnet) <bbc>&1<fff> &2;#line gag}
         };
-	#case {{(%* tells you %*}}
-	{
-	    #regex {%0} {%* tells you %*} {showtowin <ccd>@NOW{} <ffa>&1 tells you &2;#line gag}
-	};
+		#case {{(%* tells you %*}}
+		{
+			#regex {%0} {%* tells you %*} {showtowin <ccd>@NOW{} <ffa>&1 tells you &2;#line gag}
+		};
         #default
         {
             #line ignore #showme
@@ -172,7 +108,6 @@
     #line oneshot #ACTION {%*} {empty_line_handler %%0}
 }
 {4}
-
 
 #NOP ----------------------------------------------------------------------------------------
 #NOP LOGGING
