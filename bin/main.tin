@@ -66,32 +66,32 @@
 #ALIAS {empty_line_handler}
 {
 	#regex {%0} {[RPXP Gain: %* MV:%S %*} {#var mv_table[current] $mv_table[&2]};
-    #switch {{%0}}
+	#switch {{%0}}
 	{
-        #case {{[RPXP Gain: %* MV:%S %* (hooded) %*}}
-        {
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>HOODED! <ccd>MV: $mv_table[current];#line gag
-        };
-        #case {{[RPXP Gain: %* MV:%S %*}}
-        {
-            #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <ccd>MV: $mv_table[current];#line gag
-        };
-        #case {{[OOC] %* %*}}
-        {
-            #regex {%0} {[OOC] %* %*} {showtowin <ccd>@NOW{} <bfe>[OOC] <bbe>&1<fff> &2;#line gag}
-        };
+		#case {{[RPXP Gain: %* MV:%S %* (hooded) %*}}
+		{
+		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <eaa>HOODED! <ccd>MV: $mv_table[current];#line gag
+		};
+		#case {{[RPXP Gain: %* MV:%S %*}}
+		{
+		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <ccd>MV: $mv_table[current];#line gag
+		};
+		#case {{[OOC] %* %*}}
+		{
+		    #regex {%0} {[OOC] %* %*} {showtowin <ccd>@NOW{} <bfe>[OOC] <bbe>&1<fff> &2;#line gag}
+		};
 		#case {{(visnet) %* %*}}
-        {
-            #regex {%0} {(visnet) %* %*} {showtowin <ccd>@NOW{} <bfb>(visnet) <bbc>&1<fff> &2;#line gag}
-        };
+		{
+		    #regex {%0} {(visnet) %* %*} {showtowin <ccd>@NOW{} <bfb>(visnet) <bbc>&1<fff> &2;#line gag}
+		};
 		#case {{(%* tells you %*}}
 		{
-			#regex {%0} {%* tells you %*} {showtowin <ccd>@NOW{} <ffa>&1 tells you &2;#line gag}
+		    #regex {%0} {%* tells you %*} {showtowin <ccd>@NOW{} <ffa>&1 tells you &2;#line gag}
 		};
-        #default
-        {
-            #line ignore #showme
-        }
+		#default
+		{
+		    #line ignore #showme
+		}
     }
 }
 
