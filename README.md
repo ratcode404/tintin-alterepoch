@@ -9,11 +9,11 @@ Download the TinTin++ Mud client, find the `/bin/ folder` in it and replace the 
 For my settings to work correctly I use a rather small and clean window, so I can do whatever next to it, even on one monitor. You might have to fiddle a bit more if you want to use it fullscreen.  
 `TinTin Options - Text - Consolas, 10` and `TinTin Options - Window Columns 120, Rows, 62`  
 
-For the WHERERP feature to work, a custom setting does neet to be set otherwise it will always stay off. The rest of the features work nevertheless.
-You can access this settings by simply entering `SETUPSETTINGS` while using each character.
-
-#### SETUPSETTINGS
-Right now `SETUPSETTINGS` only executes following script to configure the prompt and allow the WHERERP to work.
+For the WHERERP feature to work, a custom setting does neet to be set otherwise it will always stay off. The rest of the features work nevertheless.  
+You can access this settings by simply entering `SETUPSETTINGS` while using each character.  
+  
+#### SETUPSETTINGS COmMAND
+Right now `SETUPSETTINGS` only executes following script to configure the prompt and allow the WHERERP to work.  
 `prompt {c{[RPXP Gain: %X] {[HP:%h MV:%v %p] %w %f %F %o{w%c`
 
 ## Features
