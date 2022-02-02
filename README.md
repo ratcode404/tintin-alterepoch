@@ -21,10 +21,10 @@ For my settings to work correctly I use a rather small and clean window, so I ca
 * Possible to use TinTin++ mapping features, although no plans to make a HUD for this
 
 #### Color Highlighting
-To customize your highlights, find the example `#HIGHLIGHT` in `/bin/main.tin` on line 3. More information on available colors can be found [here](https://tintin.mudhalla.net/manual/highlight.php).
+To customize your highlights, find the example `#HIGHLIGHT` in `/bin/highlight.tin` on line 1. More information on available colors can be found [here](https://tintin.mudhalla.net/manual/highlight.php).
 
 #### Color Highlighting
-To customize your macros, find the example `#ALIAS` in `/bin/main.tin`. 
+To customize your macros, find the example `#ALIAS` in `/bin/macros.tin`. There is an example one which removes your boots and gloves with one command.
 
 ## Disclaimer
 The files in this repository were created and modified by me and [Scandum](https://github.com/scandum) for my own personal use and come with no guarantee to work for you. I provide these files "as-is" and offer no support whatsoever to get them working. 
