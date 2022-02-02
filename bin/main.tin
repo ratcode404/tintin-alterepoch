@@ -57,17 +57,17 @@
 
 #VAR {mv_table}
 {
-    {fresh} 		{<afa>Fresh(10/10)}
-    {rested} 		{<cfa>Rested(9/10)}
+	{fresh} 		{<afa>Fresh(10/10)}
+	{rested} 		{<cfa>Rested(9/10)}
 	{worked} 		{<dfa>Worked(8/10)}
 	{tired} 		{<efa>Tired(7/10)}
-    {weary(} 		{<ffa>Weary(6/10)}
+	{weary} 		{<ffa>Weary(6/10)}
 	{fatigued} 		{<fea>Fatigued(5/10)}
 	{drained} 		{<fda>Drained(4/10)}
 	{sapped} 		{<fba>Sapped(3/10)}
-	{enervated} 	{<faa>Enervated(2/10)}
-	{exhausted} 	{<eaa>Exhausted(1/10)}
-	{unconscious}	{<eaa>Unconscious(0/10)}
+	{enervated} 		{<faa>Enervated(2/10)}
+	{exhausted} 		{<eaa>Exhausted(1/10)}
+	{unconscious}		{<eaa>Unconscious(0/10)}
 }
 
 #ALIAS {empty_line_handler}
