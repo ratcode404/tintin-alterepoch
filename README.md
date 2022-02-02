@@ -5,7 +5,7 @@ A very basic configuration to provide a clean layout useable in [Alter Epoch](ht
 ![Screenshot](https://i.imgur.com/ntevAjR.png)
 
 ## Installation
-Download the TinTin++ Mud client, find the `/bin/ folder` in it and replace the `main.tin` inside.  
+Download the TinTin++ Mud client, find the `/bin/ folder` in it and replace the files inside.  
 For my settings to work correctly I use a rather small and clean window, so I can do whatever next to it, even on one monitor. You might have to fiddle a bit more if you want to use it fullscreen.  
 `TinTin Options - Text - Consolas, 10` and `TinTin Options - Window Columns 120, Rows, 62`
 
