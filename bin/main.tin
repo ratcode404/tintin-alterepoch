@@ -68,13 +68,21 @@
 	#regex {%0} {[RPXP Gain: %* MV:%S %*} {#var mv_table[current] $mv_table[&2]};
 	#switch {{%0}}
 	{
+		#case {{[RPXP Gain: %* MV:%S %* (hooded) (AFK) %*}}
+		{
+		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <bbc>[ <fab>AFK <bbc>] [ <fab>HOODED <bbc>] MV: $mv_table[current];#line gag
+		};
 		#case {{[RPXP Gain: %* MV:%S %* (hooded) %*}}
 		{
-		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <bbc>[ <fab>HOODED <bbc>] MV: $mv_table[current];#line gag
+		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <bbc>[ <g02>afk <bbc>] [ <fab>HOODED <bbc>] MV: $mv_table[current];#line gag
+		};
+		#case {{[RPXP Gain: %* MV:%S %* (AFK) %*}}
+		{
+		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <bbc>[ <fab>AFK <bbc>] [ <g02>hooded <bbc>] MV: $mv_table[current];#line gag
 		};
 		#case {{[RPXP Gain: %* MV:%S %*}}
 		{
-		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <bbc>[ <g02>hooded <bbc>] MV: $mv_table[current];#line gag
+		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} %0 <bbc>[ <g02>afk <bbc>] [ <g02>hooded <bbc>] MV: $mv_table[current];#line gag
 		};
 		#case {{[OOC] %* %*}}
 		{
