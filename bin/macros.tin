@@ -1,0 +1,9 @@
+#ALIAS ARMOR1 {
+	wear boots;
+  wear gloves
+}
+
+#ALIAS ARMOR2 {
+	remove boots;
+  remove gloves
+}
