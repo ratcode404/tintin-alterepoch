@@ -12,9 +12,9 @@ For my settings to work correctly I use a rather small and clean window, so I ca
 set `TinTin Options - Text - Consolas, 10`  
 and `TinTin Options - Window Columns 120, Rows, 62`  
   
-#### Custom Prompt for 'WHERE' display
-Right now one command has to be used while logged in with the character of your choice to reconfigure the prompt and enable the WHERERP feature so it can be displayed correctly. This only has to be set once per character.    
-`prompt {c{[RPXP Gain: %X] {[HP:%h MV:%v %p] %w %f %F %o{w%c`  
+#### Custom Prompt
+To correctly display the prompt bar, you have to change the AE basic prompt. This only has to be set once per character.
+`prompt [RPXP Gain: %X] [HP:%h] MV:%v %w %f %F` 
   
 ## Features
 * OOC chat window with time-stamps
