@@ -67,11 +67,11 @@
 	#regex {%0} {[RPXP Gain: %* MV:%S %*} {#var mv_table[current] $mv_table[&2]};
 	#switch {{%0}}
 	{
-		#case {{[RPXP Gain: %* MV:%S %* (whererp) (R)(hooded) (AFK) %*}}
+		#case {{[RPXP Gain: %* MV:%S %* (whererp) (hooded) (AFK)(R) %*}}
 		{
 		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <fab>WHERE<bbc> ] [ <fab> R <bbc> ] [ <fab>AFK <bbc>] [ <fab>HOODED <bbc>] [$mv_table[current]<bbc>];#line gag
 		};
-		#case {{[RPXP Gain: %* MV:%S %* (R)(hooded) (AFK) %*}}
+		#case {{[RPXP Gain: %* MV:%S %* (hooded) (AFK)(R) %*}}
 		{
 		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <g02>where<bbc> ] [ <fab> R <bbc> ] [ <fab>AFK <bbc>] [ <fab>HOODED <bbc>] [$mv_table[current]<bbc>];#line gag
 		};
@@ -83,11 +83,11 @@
 		{
 		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <g02>where<bbc> ] [ <g02> r <bbc> ] [ <fab>AFK <bbc>] [ <fab>HOODED <bbc>] [$mv_table[current]<bbc>];#line gag
 		};
-		#case {{[RPXP Gain: %* MV:%S %* (whererp) (R)(hooded) %*}}
+		#case {{[RPXP Gain: %* MV:%S %* (whererp) (hooded) (R)%*}}
 		{
 			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <fab>WHERE<bbc> ] [ <fab> R <bbc> ] [ <g02>afk <bbc>] [ <fab>HOODED <bbc>] [$mv_table[current]<bbc>];#line gag
 		};
-		#case {{[RPXP Gain: %* MV:%S %* (R)(hooded) %*}}
+		#case {{[RPXP Gain: %* MV:%S %* (hooded) (R)}}
 		{
 			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <g02>where<bbc> ] [ <fab> R <bbc> ] [ <g02>afk <bbc>] [ <fab>HOODED <bbc>] [$mv_table[current]<bbc>];#line gag
 		};
@@ -99,13 +99,17 @@
 		{
 			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <g02>where<bbc> ] [ <g02> r <bbc> ] [ <g02>afk <bbc>] [ <fab>HOODED <bbc>] [$mv_table[current]<bbc>];#line gag
 		};
-		#case {{[RPXP Gain: %* MV:%S %* (whererp) (R) (AFK) %*}}
+		#case {{[RPXP Gain: %* MV:%S %* (whererp) (AFK) (R) %*}}
 		{
 			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <fab>WHERE<bbc> ] [ <fab> R <bbc> ] [ <fab>AFK <bbc>] [ <g02>hooded <bbc>] [$mv_table[current]<bbc>];#line gag
 		};
-		#case {{[RPXP Gain: %* MV:%S %* (R) (AFK) %*}}
+		#case {{[RPXP Gain: %* MV:%S %* (AFK) (R) %*}}
 		{
 			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <g02>where<bbc> ] [ <fab> R <bbc> ] [ <fab>AFK <bbc>] [ <g02>hooded <bbc>] [$mv_table[current]<bbc>];#line gag
+		};
+		#case {{[RPXP Gain: %* MV:%S %* (R) %*}}
+		{
+			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <g02>where<bbc> ] [ <fab> R <bbc> ] [ <g02>AFK <bbc>] [ <g02>hooded <bbc>] [$mv_table[current]<bbc>];#line gag
 		};
 		#case {{[RPXP Gain: %* MV:%S %* (whererp) (AFK) %*}}
 		{
@@ -165,5 +169,3 @@
 #NOP ----------------------------------------------------------------------------------------
 #NOP LOADED
 #NOP ----------------------------------------------------------------------------------------
-
-#SHOWME Abyzou tells you 'READY TO GO!!'
