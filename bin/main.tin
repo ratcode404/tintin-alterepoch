@@ -62,26 +62,43 @@
 	{unconscious}		{<eaa>Unconscious(0/10)}
 }
 
+#VAR {hp_table}
+{
+	{perfect} 		{<afa>Perfect(10/10)}
+	{excellent} 		{<cfa>Excellent(9/10)}
+	{scratched} 		{<dfa>Scratched(8/10)}
+	{bruised} 		{<efa>Bruised(7/10)}
+	{battered} 		{<ffa>Battered(6/10)}
+	{hurt} 		{<fea>Hurt(5/10)}
+	{wounded} 		{<fda>Wounded(4/10)}
+	{injured} 		{<fba>Injured(3/10)}
+	{mauled} 		{<faa>Mauled(2/10)}
+	{mangled} 		{<eaa>Mangled(1/10)}
+	{crippled}		{<eaa>Crippled(0/10)}
+	{dying}		{<eaa>Dying(X/10)}
+}
+
 #ALIAS {empty_line_handler}
 {
 	#regex {%0} {[RPXP Gain: %* MV:%S %*} {#var mv_table[current] $mv_table[&2]};
+	#regex {%0} {[RPXP Gain: %* HP:%S %*} {#var hp_table[current] $hp_table[&2]};
 	#switch {{%0}}
 	{
 		#case {{[RPXP Gain: %* MV:%S (whererp) (hooded)%*}}
 		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4 [$mv_table[current]<bbc>] [ <fab>HOODED <bbc>] [ <fab>WHERE<bbc> ] %7%8;#line gag
+			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 [$hp_table[current]<bbc>] [$mv_table[current]<bbc>] [ <fab>HOODED <bbc>] [ <fab>WHERE<bbc> ] %7%8;#line gag
 		};
 		#case {{[RPXP Gain: %* MV:%S %* (hooded)%*}}
 		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4 [$mv_table[current]<bbc>] [ <fab>HOODED <bbc>] [ <g02>where<bbc> ] %6%7;#line gag
+			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 [$hp_table[current]<bbc>] [$mv_table[current]<bbc>] [ <fab>HOODED <bbc>] [ <g02>where<bbc> ] %6%7;#line gag
 		};
 		#case {{[RPXP Gain: %* MV:%S (whererp) %*}}
 		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4 [$mv_table[current]<bbc>] [ <g02>hooded <bbc>] [ <fab>WHERE<bbc> ] %6%7;#line gag
+			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 [$hp_table[current]<bbc>] [$mv_table[current]<bbc>] [ <g02>hooded <bbc>] [ <fab>WHERE<bbc> ] %6%7;#line gag
 		};
 		#case {{[RPXP Gain: %* MV:%S %*}}
 		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4 [$mv_table[current]<bbc>] [ <g02>hooded <bbc>] [ <g02>where<bbc> ] %6%7;#line gag
+			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 [$hp_table[current]<bbc>] [$mv_table[current]<bbc>] [ <g02>hooded <bbc>] [ <g02>where<bbc> ] %6%7;#line gag
 		};
 		#case {{[OOC] %* %*}}
 		{
