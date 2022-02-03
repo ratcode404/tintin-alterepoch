@@ -69,13 +69,13 @@
 	{scratched} 		{<dfa>Scratched(8/10)}
 	{bruised} 		{<efa>Bruised(7/10)}
 	{battered} 		{<ffa>Battered(6/10)}
-	{hurt} 		{<fea>Hurt(5/10)}
+	{hurt} 			{<fea>Hurt(5/10)}
 	{wounded} 		{<fda>Wounded(4/10)}
 	{injured} 		{<fba>Injured(3/10)}
 	{mauled} 		{<faa>Mauled(2/10)}
 	{mangled} 		{<eaa>Mangled(1/10)}
 	{crippled}		{<eaa>Crippled(0/10)}
-	{dying}		{<eaa>Dying(X/10)}
+	{dying}			{<eaa>Dying(X/10)}
 }
 
 #ALIAS {empty_line_handler}
