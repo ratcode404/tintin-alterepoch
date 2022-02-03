@@ -14,7 +14,7 @@ and `TinTin Options - Window Columns 120, Rows, 62`
   
 #### Custom Prompt
 To correctly display the prompt bar, you have to change the AE basic prompt. This only has to be set once per character.
-`prompt [RPXP Gain: %X] [HP:%h] MV:%v %w %f %F` 
+`prompt [RPXP Gain: %X] HP:%h MV:%v %w %f %F` 
   
 ## Features
 * OOC chat window with time-stamps
