@@ -67,65 +67,21 @@
 	#regex {%0} {[RPXP Gain: %* MV:%S %*} {#var mv_table[current] $mv_table[&2]};
 	#switch {{%0}}
 	{
-		#case {{[RPXP Gain: %* MV:%S %* (whererp) (hooded)%* (AFK)(R) %*}}
+		#case {{[RPXP Gain: %* MV:%S (whererp) (hooded)%*}}
 		{
-		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <fab>WHERE<bbc> ] [ <fab> R <bbc> ] [ <fab>AFK <bbc>] [ <fab>HOODED <bbc>] [$mv_table[current]<bbc>];#line gag
+			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4 [$mv_table[current]<bbc>] [ <fab>HOODED <bbc>] [ <fab>WHERE<bbc> ] %7%8;#line gag
 		};
-		#case {{[RPXP Gain: %* MV:%S %* (hooded)%* (AFK)(R) %*}}
+		#case {{[RPXP Gain: %* MV:%S %* (hooded)%*}}
 		{
-		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <g02>where<bbc> ] [ <fab> R <bbc> ] [ <fab>AFK <bbc>] [ <fab>HOODED <bbc>] [$mv_table[current]<bbc>];#line gag
+			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4 [$mv_table[current]<bbc>] [ <fab>HOODED <bbc>] [ <g02>where<bbc> ] %6%7;#line gag
 		};
-		#case {{[RPXP Gain: %* MV:%S %* (whererp) (hooded)%* (AFK) %*}}
+		#case {{[RPXP Gain: %* MV:%S (whererp) %*}}
 		{
-		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <fab>WHERE<bbc> ] [ <g02> r <bbc> ] [ <fab>AFK <bbc>] [ <fab>HOODED <bbc>] [$mv_table[current]<bbc>];#line gag
-		};
-		#case {{[RPXP Gain: %* MV:%S %* (hooded)%* (AFK) %*}}
-		{
-		    #DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <g02>where<bbc> ] [ <g02> r <bbc> ] [ <fab>AFK <bbc>] [ <fab>HOODED <bbc>] [$mv_table[current]<bbc>];#line gag
-		};
-		#case {{[RPXP Gain: %* MV:%S %* (whererp) (hooded)%* (R)%*}}
-		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <fab>WHERE<bbc> ] [ <fab> R <bbc> ] [ <g02>afk <bbc>] [ <fab>HOODED <bbc>] [$mv_table[current]<bbc>];#line gag
-		};
-		#case {{[RPXP Gain: %* MV:%S %* (hooded)%* (R)}}
-		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <g02>where<bbc> ] [ <fab> R <bbc> ] [ <g02>afk <bbc>] [ <fab>HOODED <bbc>] [$mv_table[current]<bbc>];#line gag
-		};
-		#case {{[RPXP Gain: %* MV:%S %* (whererp) (hooded)%* %*}}
-		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <fab>WHERE<bbc> ] [ <g02> r <bbc> ] [ <g02>afk <bbc>] [ <fab>HOODED <bbc>] [$mv_table[current]<bbc>];#line gag
-		};
-		#case {{[RPXP Gain: %* MV:%S %* (hooded)%* %*}}
-		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <g02>where<bbc> ] [ <g02> r <bbc> ] [ <g02>afk <bbc>] [ <fab>HOODED <bbc>] [$mv_table[current]<bbc>];#line gag
-		};
-		#case {{[RPXP Gain: %* MV:%S %* (whererp) (AFK) (R) %*}}
-		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <fab>WHERE<bbc> ] [ <fab> R <bbc> ] [ <fab>AFK <bbc>] [ <g02>hooded <bbc>] [$mv_table[current]<bbc>];#line gag
-		};
-		#case {{[RPXP Gain: %* MV:%S %* (AFK) (R) %*}}
-		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <g02>where<bbc> ] [ <fab> R <bbc> ] [ <fab>AFK <bbc>] [ <g02>hooded <bbc>] [$mv_table[current]<bbc>];#line gag
-		};
-		#case {{[RPXP Gain: %* MV:%S %* (R) %*}}
-		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <g02>where<bbc> ] [ <fab> R <bbc> ] [ <g02>AFK <bbc>] [ <g02>hooded <bbc>] [$mv_table[current]<bbc>];#line gag
-		};
-		#case {{[RPXP Gain: %* MV:%S %* (whererp) (AFK) %*}}
-		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <fab>WHERE<bbc> ] [ <g02> r <bbc> ] [ <fab>AFK <bbc>] [ <g02>hooded <bbc>] [$mv_table[current]<bbc>];#line gag
-		};
-		#case {{[RPXP Gain: %* MV:%S %* (AFK) %*}}
-		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <g02>where<bbc> ] [ <g02> r <bbc> ] [ <fab>AFK <bbc>] [ <g02>hooded <bbc>] [$mv_table[current]<bbc>];#line gag
-		};
-		#case {{[RPXP Gain: %* MV:%S %* (whererp) %*}}
-		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <fab>WHERE<bbc> ] [ <g02> r <bbc> ] [ <g02>afk <bbc>] [ <g02>hooded <bbc>] [$mv_table[current]<bbc>];#line gag
+			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4 [$mv_table[current]<bbc>] [ <g02>hooded <bbc>] [ <fab>WHERE<bbc> ] %6%7;#line gag
 		};
 		#case {{[RPXP Gain: %* MV:%S %*}}
 		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4] [%6 [ <g02>where<bbc> ] [ <g02> r <bbc> ] [ <g02>afk <bbc>] [ <g02>hooded <bbc>] [$mv_table[current]<bbc>];#line gag
+			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 %4 [$mv_table[current]<bbc>] [ <g02>hooded <bbc>] [ <g02>where<bbc> ] %6%7;#line gag
 		};
 		#case {{[OOC] %* %*}}
 		{
