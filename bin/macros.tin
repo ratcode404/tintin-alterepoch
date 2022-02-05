@@ -11,6 +11,6 @@
 #ALIAS {TIN}
 {
 	hold scrambler;
-	text <g14>%0 <g13>- NAME;
+	text %0 <g13>- NAME;
 	remove scrambler
 }
