@@ -1,9 +1,16 @@
 #ALIAS ARMOR1 {
 	wear boots;
-  wear gloves
+  	wear gloves
 }
 
 #ALIAS ARMOR2 {
 	remove boots;
-  remove gloves
+  	remove gloves
+}
+
+#ALIAS {TIN}
+{
+	hold scrambler;
+	text <g14>%0 <g13>- NAME;
+	remove scrambler
 }
