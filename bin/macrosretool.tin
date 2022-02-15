@@ -1,0 +1,5 @@
+#ALIAS TOOLFLOWER {
+	retool credstick flower;
+  tool flower short retooled-flower-here;
+  finalize flower
+}
