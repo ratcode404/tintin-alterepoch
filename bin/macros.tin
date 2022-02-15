@@ -2,15 +2,3 @@
 	wear boots;
   	wear gloves
 }
-
-#ALIAS ARMOR2 {
-	remove boots;
-  	remove gloves
-}
-
-#ALIAS {TIN}
-{
-	hold scrambler;
-	text %0 <g13>- NAME;
-	remove scrambler
-}
