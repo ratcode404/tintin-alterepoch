@@ -1,4 +1,16 @@
+#NOP ----------------------------------------------------------------------------------------
+#NOP Quick Gear
+#NOP ----------------------------------------------------------------------------------------
+
 #ALIAS ARMOR1 {
 	wear boots;
   	wear gloves
+}
+
+#ALIAS HOME3 {
+	get key from pants;
+	unlock door;
+	put key in pants;
+	open door;
+	enter door
 }
