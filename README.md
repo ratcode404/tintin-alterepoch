@@ -2,7 +2,7 @@
 
 A very basic configuration to provide a clean layout useable in [Alter Epoch](https://ae-mud.com/) for the [TinTin++](https://tintin.sourceforge.io) MUD client.
 
-![Screenshot](https://i.imgur.com/gMdtXsy.png)
+![Screenshot](https://i.imgur.com/DJ0w1vn.png)
 
 ## Installation
 Installing the configuration is easy. Download the TinTin++ Mud client, find the `/bin/ folder` of the installation and replace the files inside. The standard installation for WinTin++ installations directs to `C:/Users/XXX/AppData/Roaming/WinTin++/bin`.
