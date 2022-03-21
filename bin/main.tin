@@ -85,21 +85,29 @@
 	#regex {%0} {[RPXP Gain: %* HP:%S %*} {#var hp_table[current] $hp_table[&2]};
 	#switch {{%0}}
 	{
-		#case {{[RPXP Gain: %* MV:%S (whererp) (hooded)%* %*}}
+		#case {{[RPXP Gain: %* MV:%S (whererp) %*(hooded)%* %*}}
 		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 [$hp_table[current]<bbc>] [$mv_table[current]<bbc>] [ <fab>HOODED <bbc>] [ <fab>WHERE<bbc> ] %7%8;#line gag
+			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 [$hp_table[current]<bbc>] [$mv_table[current]<bbc>] [<fab>HOODED<bbc>] [<fab>WHERE<bbc>] %7%8;#line gag
 		};
-		#case {{[RPXP Gain: %* MV:%S %* (hooded)%* %*}}
+		#case {{[RPXP Gain: %* MV:%S %* %*(hooded)%* %*}}
 		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 [$hp_table[current]<bbc>] [$mv_table[current]<bbc>] [ <fab>HOODED <bbc>] [ <g02>where<bbc> ] %6%7;#line gag
+			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 [$hp_table[current]<bbc>] [$mv_table[current]<bbc>] [<fab>HOODED<bbc>] [<g02>where<bbc>] %6%7;#line gag
+		};
+		#case {{[RPXP Gain: %* MV:%S (whererp) %*(concealed)%* %*}}
+		{
+			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 [$hp_table[current]<bbc>] [$mv_table[current]<bbc>] [<fab>HOODED<bbc>] [<fab>WHERE<bbc>] %7%8;#line gag
+		};
+		#case {{[RPXP Gain: %* MV:%S %* %*(concealed)%* %*}}
+		{
+			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 [$hp_table[current]<bbc>] [$mv_table[current]<bbc>] [<fab>HOODED<bbc>] [<g02>where<bbc>] %6%7;#line gag
 		};
 		#case {{[RPXP Gain: %* MV:%S (whererp) %*}}
 		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 [$hp_table[current]<bbc>] [$mv_table[current]<bbc>] [ <g02>hooded <bbc>] [ <fab>WHERE<bbc> ] %6%7;#line gag
+			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 [$hp_table[current]<bbc>] [$mv_table[current]<bbc>] [<g02>hooded<bbc>] [<fab>WHERE<bbc>] %7%8;#line gag
 		};
 		#case {{[RPXP Gain: %* MV:%S %*}}
 		{
-			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 [$hp_table[current]<bbc>] [$mv_table[current]<bbc>] [ <g02>hooded <bbc>] [ <g02>where<bbc> ] %6%7;#line gag
+			#DRAW WHITE BOX 13 1 15 120 <ccd>@NOW{} <bbc>%1 %2 %3 [$hp_table[current]<bbc>] [$mv_table[current]<bbc>] [<g02>hooded<bbc>] [<g02>where<bbc>] %6%7;#line gag
 		};
 		#case {{[OOC] %* %*}}
 		{
@@ -108,6 +116,10 @@
 		#case {{(visnet) %* %*}}
 		{
 		    #regex {%0} {(visnet) %* %*} {showtowin <ccd>@NOW{} <bfb>(visnet) <bbc>&1<fff> &2;#line gag}
+		};
+		#case {{[Guide] %* %*}}
+		{
+		    #regex {%0} {[Guide] %* %*} {showtowin <ccd>@NOW{} <fff>[Guide] <afa>&1<fff> &2;#line gag}
 		};
 		#case {{(%* tells you %* %*}}
 		{
